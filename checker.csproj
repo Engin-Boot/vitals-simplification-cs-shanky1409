@@ -12,6 +12,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="checker.cs" />
+    <Compile Include="ExpectationChecker.cs" />
     <Compile Include="RangeChecker.cs" />
   </ItemGroup>
   <ItemGroup />

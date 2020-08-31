@@ -14,6 +14,7 @@
     <Compile Include="checker.cs" />
     <Compile Include="ExpectationChecker.cs" />
     <Compile Include="RangeChecker.cs" />
+    <Compile Include="VitalChecker.cs" />
   </ItemGroup>
   <ItemGroup />
   <Target Name="Build">

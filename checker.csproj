@@ -1,8 +1,23 @@
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <ProjectGuid>{ECC2FC4F-474D-4E92-8FAB-D2C80E645AF0}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
-    <Compile Include="checker.cs"/>
+    <Compile Include="checker.cs" />
+    <Compile Include="ExpectationChecker.cs" />
+    <Compile Include="RangeChecker.cs" />
+    <Compile Include="VitalChecker.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Target Name="Build">
-    <Csc Sources="@(Compile)"/>  
+    <Csc Sources="@(Compile)" />  
   </Target>
 </Project>

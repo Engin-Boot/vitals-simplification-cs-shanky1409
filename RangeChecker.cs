@@ -1,15 +1,16 @@
 ﻿internal class RangeChecker
 {
-    static internal bool CheckBpm(float bpm)
+    private float lowerLimit;
+    private float upperLimit;
+    internal RangeChecker(float lowerLimit , float upperLimit)
     {
-        return (bpm < 70 ? false : bpm > 150 ? false : true);
+        this.lowerLimit = lowerLimit;
+        this.upperLimit = upperLimit;
     }
-    static internal bool CheckSpo2(float spo2)
+    internal bool CheckVitalRange(float value)
     {
-        return (spo2 < 90 ? false : true);
-    }
-    static internal bool CheckRespRate(float respRate)
-    {
-        return (respRate < 30 ? false : respRate > 95 ? false : true);
+        if(value < this.lowerLimit || value > this.upperLimit)
+            return false;
+        return true;
     }
 }
